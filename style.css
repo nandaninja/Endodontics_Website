@@ -107,6 +107,11 @@ main {
   padding-top: 120px; /* spacing given for differentiation */
 }
 
+.show-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* optional for spacing */
+}
 
 
 section {
