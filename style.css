@@ -480,8 +480,8 @@ footer {
   }
 
   .map-container {
-    width: 100%; /* Ensure map is full width on smaller screens */
-    height: 200px; /* Adjust height for mobile screens */
+    width: 170%; /* Ensure map is full width on smaller screens */
+    height: 300px; /* Adjust height for mobile screens */
   }
 
   .location-details {
