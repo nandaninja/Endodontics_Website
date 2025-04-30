@@ -425,10 +425,13 @@ footer {
 /* General styles for the location section */
 .location {
   padding: 2rem;
-  background-color: #f9f9f9;
+  background-color:  #f0f0f0; /* #f9f9f9; also try */
   text-align: center;
   border: 2px solid #ccc; /* Adding border to highlight the section */
   border-radius: 10px; /* Rounded corners for a smooth look */
+  width: 100%; /* Ensure it takes full width */
+  max-width: 500px; /* Set the maximum width to match the map box */
+  margin: 0 auto;
 }
 
 /* Heading style */
