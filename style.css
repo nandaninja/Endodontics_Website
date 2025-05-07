@@ -199,10 +199,12 @@ section > p {
 }
 
 .service-cards .card img {
-  width: 100%;  /* Ensures the image takes up the full width of the container */
-  height: auto;  /* Ensures the image height is adjusted proportionally */
+  width: 100%;  /* Ensure the image fills the container width */
+  height: 200px; /* Fix the height to make all images the same height */
+  object-fit: cover; /* Ensures the image covers the space without stretching */
   border-radius: 8px;
 }
+
 
 
 .card {
