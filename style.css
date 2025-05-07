@@ -198,6 +198,20 @@ section > p {
   margin-top: 3rem;
 }
 
+.service-cards .card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+  width: 250px;
+  margin: 15px;
+}
+
+.service-cards .card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 .card {
   background: var(--cream);
   padding: 2rem;
