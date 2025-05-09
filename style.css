@@ -1,14 +1,14 @@
 /* 
  Base Styles and Colors - Minimilistic colors are used
  */
- :root {
+:root {
   --primary: #1d4f91; /* Royal Blue */
   --primary-dark: #0c2d5c;
   --primary-light: #5b8fc9;
-  --secondary: #0e00463; /* English Blue ( English tea - #bf8033(but makes readablity difficult)) */
+  --secondary: #0e0046; /* dark violet and indigo shade. (  orange-brown - #bf8033(but makes readablity difficult)) */
   --secondary-dark: #8b6d4c;
   --accent: #b31942; /* English Rose */
-  --success: #285c3f; /* British Racing Green */
+  --success: #285c3f; /* Green */
   --text: #2c3642;
   --background: #f5f5f5; /* English Mist */
   --cream: #f3e5d8; /* Clotted Cream */
@@ -147,7 +147,7 @@ section > p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('/images/hero-bg.jpg') center/cover;
+  background: linear-gradient(rgba(14, 0, 70, 0.5), rgba(14, 0, 70, 0.5)), url('Dental.jpg') center/cover;
   opacity: 0.15;
 }
 
@@ -197,6 +197,15 @@ section > p {
   gap: 2rem;
   margin-top: 3rem;
 }
+
+.service-cards .card img {
+  width: 100%;  /* Ensure the image fills the container width */
+  height: 200px; /* Fix the height to make all images the same height */
+  object-fit: cover; /* Ensures the image covers the space without stretching */
+  border-radius: 8px;
+}
+
+
 
 .card {
   background: var(--cream);
@@ -431,21 +440,6 @@ footer {
   border-radius: 10px; /* Rounded corners for a smooth look */
 }
 
-.service-cards .card {
-  border: 1px solid #ccc;
-  padding: 15px;
-  text-align: center;
-  width: 250px;
-  margin: 15px;
-}
-
-.service-cards .card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-
 /* Heading style */
 .location h2 {
   font-size: 2rem;
@@ -495,7 +489,7 @@ footer {
   }
 
   .map-container {
-    width: 170%; /* Ensure map is full width on smaller screens */
+    width: 100%; /* Ensure map is full width on smaller screens */
     height: 300px; /* Adjust height for mobile screens */
   }
 
