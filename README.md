@@ -33,7 +33,8 @@ Access password: **admin123**
 
 * PMS System (Admin-only):
   [https://nandaninja.github.io/nandaninja-Patient-Management-System/](https://nandaninja.github.io/nandaninja-Patient-Management-System/)
-  Password to access: `admin123`
+  
+Password to access: `admin123`
 
 * Resume & Project Portfolio:
   [https://nandaninja.github.io/resume-website/](https://nandaninja.github.io/resume-website/)
