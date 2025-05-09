@@ -1,11 +1,11 @@
-/*
-Base Styles and Colors - Minimalistic colors are used
-*/
+/* 
+ Base Styles and Colors - Minimilistic colors are used
+ */
 :root {
   --primary: #1d4f91; /* Royal Blue */
   --primary-dark: #0c2d5c;
   --primary-light: #5b8fc9;
-  --secondary: #0e0046; /* Dark violet and indigo shade */
+  --secondary: #0e0046; /* dark violet and indigo shade. (  orange-brown - #bf8033(but makes readablity difficult)) */
   --secondary-dark: #8b6d4c;
   --accent: #b31942; /* English Rose */
   --success: #285c3f; /* Green */
@@ -24,11 +24,12 @@ Base Styles and Colors - Minimalistic colors are used
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.1);
   --gradient: linear-gradient(135deg, var(--primary) 0%, var(--burgundy) 100%);
+  
 }
 
-/*
-Reset and Base
-*/
+/* 
+ Reset and Base
+ */
 * {
   margin: 0;
   padding: 0;
@@ -44,9 +45,9 @@ body {
   background-color: var(--background);
 }
 
-/*
-Header and Navigation
-*/
+/* 
+ Header and Navigation
+ */
 header {
   background-color: var(--primary-light); /* Light Blue Header */
   position: fixed;
@@ -56,6 +57,7 @@ header {
   height: 64px;
   box-shadow: var(--shadow);
 }
+
 
 nav {
   max-width: 1200px;
@@ -68,9 +70,9 @@ nav {
 }
 
 nav .logo {
-  font-size: 20px;
+  font-size: 20px; /* Make logo text smaller - instead of logo , used Clinic Name */
   font-weight: bold;
-  color: #ffffff; /* White */
+  color: #ffffff; /* White  */
   text-decoration: none;
 }
 
@@ -98,10 +100,14 @@ nav ul li a.active {
   transform: translateY(-2px);
 }
 
+
+
 /* Main Content */
 main {
   padding-top: 120px; /* spacing given for differentiation */
 }
+
+
 
 section {
   padding: 1rem 2rem;
@@ -123,6 +129,8 @@ section > p {
   margin: 0 auto 3rem;
 }
 
+
+ 
 /* Hero Section */
 .hero {
   background: var(--gradient);
@@ -175,12 +183,13 @@ section > p {
   transform: translateY(-2px);
 }
 
-/*
-Services Section
-*/
+/* 
+ Services Section
+ */
 .services {
   background: var(--gray-300); /* Very light gray */
 }
+
 
 .service-cards {
   display: grid;
@@ -190,11 +199,13 @@ Services Section
 }
 
 .service-cards .card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  width: 100%;  /* Ensure the image fills the container width */
+  height: 200px; /* Fix the height to make all images the same height */
+  object-fit: cover; /* Ensures the image covers the space without stretching */
   border-radius: 8px;
 }
+
+
 
 .card {
   background: var(--cream);
@@ -222,9 +233,9 @@ Services Section
   font-size: 0.9375rem;
 }
 
-/*
-About Section
-*/
+/* 
+ About Section
+ */
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -256,9 +267,9 @@ About Section
   color: var(--text);
 }
 
-/*
-Contact Section
-*/
+/* 
+ Contact Section
+ */
 .contact-info {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -291,9 +302,9 @@ Contact Section
   margin-bottom: 0.5rem;
 }
 
-/*
-Buttons
-*/
+/* 
+ Buttons
+ */
 .btn {
   background: var(--burgundy);
   color: white;
@@ -333,9 +344,9 @@ Buttons
   text-align: center;
 }
 
-/*
-Forms
-*/
+/* 
+ Forms
+ */
 .form-group {
   margin-bottom: 1.5rem;
 }
@@ -348,76 +359,143 @@ label {
   font-size: 0.9375rem;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid var(--gray-200);
-  border-radius: 0.5rem;
-  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.375rem;
+  font-size: 0.9375rem;
+  transition: border-color 0.2s;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
+input:focus, select:focus, textarea:focus {
   border-color: var(--primary);
-  outline: none;
-  box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
-/* Responsiveness for mobile */
+/* 
+ Footer
+ */
+footer {
+  background: var(--gray-200);
+  text-align: center;
+  padding: 2rem;
+  color: var(--secondary);
+  font-size: 0.9375rem;
+  border-top: 1px solid var(--border);
+}
+
+/* 
+ Responsive Adjustments 
+ */
+@media (max-width: 1024px) {
+  .service-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   nav ul {
     display: none;
   }
-
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
-
+  .hero p {
+    font-size: 1rem;
+  }
   .service-cards {
     grid-template-columns: 1fr;
   }
-
-  .about-content {
-    grid-template-columns: 1fr;
-  }
-
   .contact-info {
     grid-template-columns: 1fr;
   }
+}
 
-  .btn-center {
-    max-width: 300px;
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+  section {
+    padding: 3rem 1.5rem;
   }
 }
 
-/* General Map Container */
+/* General styles for the location section */
+.location {
+  padding: 2rem;
+  background-color:  #f0f0f0; /* #f9f9f9; also try */
+  text-align: center;
+  border: 2px solid #ccc; /* Adding border to highlight the section */
+  border-radius: 10px; /* Rounded corners for a smooth look */
+}
+
+/* Heading style */
+.location h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Flexbox container for content */
+.location-info {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Align vertically */
+  gap: 2rem; /* Reduced gap for items to be closer */
+  margin-top: 1rem;
+}
+
+/* Styles for the location details */
+.location-details {
+  max-width: 350px;
+  text-align: left; /* Align text to the left for better readability */
+  background-color: #fff; /* Light background for readability */
+  padding: 1rem;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Paragraph styling inside location details */
+.location-details p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+/* Styling the map */
 .map-container {
   width: 100%;
-  height: 200px; /* or adjust as per your requirement */
-  position: relative;
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+  max-width: 500px; /* Set a max width for the map */
+  height: 300px; /* Adjust map height */
   border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-/* Ensure map doesn’t overflow on smaller screens */
-@media (max-width: 768px) {
-  .map-container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 1rem; /* Adds padding to prevent overflow on small screens */
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .location-info {
+    flex-direction: column; /* Stack vertically on small screens */
+    gap: 1rem; /* Reduce gap between address and map */
   }
 
-  .map-container iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
+  .map-container {
+    width: 100%; /* Ensure map is full width on smaller screens */
+    height: 300px; /* Adjust height for mobile screens */
+  }
+
+  .location-details {
+    max-width: 100%; /* Make location details full width on mobile */
+    padding: 1rem;
+    text-align: center; /* Center text for smaller screens */
   }
 }
