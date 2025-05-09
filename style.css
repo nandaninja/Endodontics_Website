@@ -489,7 +489,7 @@ footer {
   }
 
   .map-container {
-    width: 170%; /* Ensure map is full width on smaller screens */
+    width: 100%; /* Ensure map is full width on smaller screens */
     height: 300px; /* Adjust height for mobile screens */
   }
 
