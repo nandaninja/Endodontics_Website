@@ -472,30 +472,27 @@ footer {
   color: #555;
 }
 
-/* Styling the map */
+/* Styling the map container */
 .map-container {
   width: 100%;
-  max-width: 500px; /* Set a max width for the map */
-  height: 300px; /* Adjust map height */
+  max-width: 600px; /* Set a max-width for the map */
+  height: 200px; /* Adjust map height */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 0 auto; /* Ensure the map is centered */
+  overflow: hidden; /* Prevent overflow */
 }
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
   .location-info {
-    flex-direction: column; /* Stack vertically on small screens */
+    flex-direction: column; /* Stack elements vertically on small screens */
     gap: 1rem; /* Reduce gap between address and map */
   }
 
   .map-container {
-    width: 100%; /* Ensure map is full width on smaller screens */
-    height: 300px; /* Adjust height for mobile screens */
-  }
-
-  .location-details {
-    max-width: 100%; /* Make location details full width on mobile */
-    padding: 1rem;
-    text-align: center; /* Center text for smaller screens */
+    width: 90%; /* Make the map container 90% of the screen width on mobile */
+    max-width: 400px; /* Limit the max width to avoid the map stretching */
+    height: 180px; /* Adjust height for a smaller map */
   }
 }
